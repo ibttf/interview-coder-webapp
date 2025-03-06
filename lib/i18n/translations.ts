@@ -186,7 +186,7 @@ export const translations = {
 
     // Misc
     misc: {
-      easyWorker: "still not patched",
+      easyWorker: "Now in Hindi!",
       affiliate: "Affiliate",
       proof: "Proof",
       watchMe:
@@ -423,7 +423,7 @@ export const translations = {
 
     // Misc
     misc: {
-      easyWorker: "इतना आसान कि कार्यकर्ता 17 भी इसका उपयोग कर सकता है",
+      easyWorker: "अब हिंदी में!",
       affiliate: "सहबद्ध",
       proof: "प्रमाण",
       watchMe:
