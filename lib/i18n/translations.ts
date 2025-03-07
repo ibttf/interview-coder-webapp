@@ -110,7 +110,7 @@ export const translations = {
         q4: {
           question: "What programming languages are supported?",
           answer:
-            "Python, Golang, R, SQL, Ruby, Java, Javascript, C++, Kotlin, and Swift. You can edit your preferred langauge in the app or in your settings."
+            "Python, Golang, R, SQL, Ruby, Java, Javascript, C++, Kotlin, and Swift. You can edit your preferred language in the app or in your settings."
         },
         q5: {
           question: "I'm experiencing a bug, what should I do",
@@ -186,7 +186,7 @@ export const translations = {
 
     // Misc
     misc: {
-      easyWorker: "still not patched",
+      easyWorker: "Now in Hindi!",
       affiliate: "Affiliate",
       proof: "Proof",
       watchMe:
@@ -423,7 +423,7 @@ export const translations = {
 
     // Misc
     misc: {
-      easyWorker: "इतना आसान कि कार्यकर्ता 17 भी इसका उपयोग कर सकता है",
+      easyWorker: "अब हिंदी में!",
       affiliate: "सहबद्ध",
       proof: "प्रमाण",
       watchMe:
