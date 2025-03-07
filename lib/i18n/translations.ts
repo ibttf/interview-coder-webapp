@@ -110,7 +110,7 @@ export const translations = {
         q4: {
           question: "What programming languages are supported?",
           answer:
-            "Python, Golang, R, SQL, Ruby, Java, Javascript, C++, Kotlin, and Swift. You can edit your preferred langauge in the app or in your settings."
+            "Python, Golang, R, SQL, Ruby, Java, Javascript, C++, Kotlin, and Swift. You can edit your preferred language in the app or in your settings."
         },
         q5: {
           question: "I'm experiencing a bug, what should I do",
