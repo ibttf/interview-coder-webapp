@@ -478,7 +478,7 @@ export default function Navbar({ showBanner = false }: NavbarProps) {
 
                             <Button variant="default" className="w-full">
                               <Link
-                                href="https://github.com/ibttf/interview-coder/releases/download/v1.0.19/Interview.Coder-Windows-1.0.18.exe"
+                                href="https://github.com/ibttf/interview-coder/releases/download/v1.0.19/Interview.Coder-Windows-1.0.19.exe"
                                 className="flex items-center justify-center w-full bg-primary hover:bg-primary/90 text-black transition-all px-4 py-1.5 text-sm font-medium rounded-md"
                               >
                                 <Image

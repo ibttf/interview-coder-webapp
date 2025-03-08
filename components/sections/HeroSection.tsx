@@ -90,7 +90,7 @@ export const HeroSection = () => {
           </DropdownMenu>
           <Button variant="highlight" className="w-full sm:w-auto px-6 py-2">
             <Link
-              href="https://github.com/ibttf/interview-coder/releases/download/v1.0.19/Interview.Coder-Windows-1.0.18.exe"
+              href="https://github.com/ibttf/interview-coder/releases/download/v1.0.19/Interview.Coder-Windows-1.0.19.exe"
               className="flex items-center gap-2"
             >
               <Image
