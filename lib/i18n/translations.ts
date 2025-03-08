@@ -34,7 +34,7 @@ export const translations = {
       title: "Works on Everything",
       subtitle: "Invisible to all screen-recording softwares.",
       disclaimer:
-        "* Undetectability may not work with some versions of MacOS. THIS IS NOT REFUNDABLE. See our notice for more details."
+        "* Undetectability may not work with some versions of MacOS. THIS IS NOT REFUNDABLE. See our"
     },
 
     // Steps Section
