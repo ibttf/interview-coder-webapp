@@ -85,27 +85,27 @@ function FaqItem({
 export function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const { t } = useLanguage()
-  
+
   const faqs = [
     {
-      question: t('faq.questions.q1.question'),
-      answer: t('faq.questions.q1.answer')
+      question: t("faq.questions.q1.question"),
+      answer: t("faq.questions.q1.answer")
     },
     {
-      question: t('faq.questions.q2.question'),
-      answer: t('faq.questions.q2.answer')
+      question: t("faq.questions.q2.question"),
+      answer: t("faq.questions.q2.answer")
     },
     {
-      question: t('faq.questions.q3.question'),
-      answer: t('faq.questions.q3.answer')
+      question: t("faq.questions.q3.question"),
+      answer: t("faq.questions.q3.answer")
     },
     {
-      question: t('faq.questions.q4.question'),
-      answer: t('faq.questions.q4.answer')
+      question: t("faq.questions.q4.question"),
+      answer: t("faq.questions.q4.answer")
     },
     {
-      question: t('faq.questions.q5.question'),
-      answer: t('faq.questions.q5.answer')
+      question: t("faq.questions.q5.question"),
+      answer: t("faq.questions.q5.answer")
     }
   ]
 
@@ -114,10 +114,10 @@ export function FaqSection() {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4 tracking-tight">
-            <span className="white-gradient font-inter">{t('faq.title')}</span>
+            <span className="white-gradient font-inter">{t("faq.title")}</span>
           </h2>
           <p className="text-neutral-400 max-w-2xl mx-auto">
-            {t('faq.subtitle')}
+            {t("faq.subtitle")}
           </p>
         </div>
 
@@ -136,11 +136,11 @@ export function FaqSection() {
         {/* Help Center Link */}
         <div className="text-center mt-8">
           <p className="text-neutral-500">
-            {t('faq.helpCenterPrefix')}{" "}
+            {t("faq.helpCenterPrefix")}{" "}
             <Link href="/help" className="text-primary hover:underline">
-              {t('faq.helpCenterLink')}
+              {t("faq.helpCenterLink")}
             </Link>{" "}
-            {t('faq.helpCenterSuffix')}
+            {t("faq.helpCenterSuffix")}
           </p>
         </div>
 
@@ -157,11 +157,9 @@ export function FaqSection() {
           <div className="">
             <div className="space-y-4">
               <h2 className="text-4xl font-bold tracking-tight">
-                {t('cta.title')}
+                {t("cta.title")}
               </h2>
-              <p className="text-neutral-400">
-                {t('cta.subtitle')}
-              </p>
+              <p className="text-neutral-400">{t("cta.subtitle")}</p>
             </div>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
               <DropdownMenu>
@@ -175,25 +173,25 @@ export function FaqSection() {
                         height={16}
                         className="w-4 h-4"
                       />
-                      {t('hero.downloadMac')}
+                      {t("hero.downloadMac")}
                     </div>
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   <DropdownMenuItem>
                     <Link
-                      href="https://github.com/ibttf/interview-coder/releases/download/v1.0.18/Interview-Coder-arm64.dmg"
+                      href="https://github.com/ibttf/interview-coder/releases/download/v1.0.19/Interview-Coder-arm64.dmg"
                       className="w-full"
                     >
-                      {t('hero.macSilicon')}
+                      {t("hero.macSilicon")}
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <Link
-                      href="https://github.com/ibttf/interview-coder/releases/download/v1.0.18/Interview-Coder-x64.dmg"
+                      href="https://github.com/ibttf/interview-coder/releases/download/v1.0.19/Interview-Coder-x64.dmg"
                       className="w-full"
                     >
-                      {t('hero.macIntel')}
+                      {t("hero.macIntel")}
                     </Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
@@ -203,7 +201,7 @@ export function FaqSection() {
                 className="gap-2 text-sm font-medium h-10 w-[280px] md:w-[320px] border-neutral-700 hover:bg-neutral-800"
               >
                 <Link
-                  href="https://github.com/ibttf/interview-coder/releases/download/v1.0.18/Interview.Coder-Windows-1.0.18.exe"
+                  href="https://github.com/ibttf/interview-coder/releases/download/v1.0.19/Interview.Coder-Windows-1.0.18.exe"
                   className="flex items-center gap-2"
                 >
                   <Image
@@ -213,7 +211,7 @@ export function FaqSection() {
                     height={16}
                     className="w-4 h-4"
                   />
-                  {t('hero.downloadWindows')}
+                  {t("hero.downloadWindows")}
                 </Link>
               </Button>
             </div>

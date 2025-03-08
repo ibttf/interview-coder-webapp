@@ -3,6 +3,7 @@ import { NextResponse } from "next/server"
 import Anthropic from "@anthropic-ai/sdk"
 import { withTimeout, type ProblemInfo } from "../config"
 import { z } from "zod"
+import { verifyAuth } from "../auth"
 
 export const maxDuration = 300
 
@@ -16,6 +17,15 @@ const SolutionResponse = z.object({
 export async function POST(request: Request) {
   try {
     console.log("Starting POST request processing...")
+
+    // Verify authentication first
+    const authResult = await verifyAuth()
+    if (authResult.error) {
+      return NextResponse.json(
+        { error: authResult.error },
+        { status: authResult.status }
+      )
+    }
 
     const problemInfo = (await request.json()) as ProblemInfo
     console.log("Received problem info:", {
@@ -89,7 +99,9 @@ Test Cases: ${JSON.stringify(problemInfo.test_cases ?? [], null, 2)}`
         return NextResponse.json(
           {
             error:
-              "Please close this window and re-enter a valid Anthropic API key."
+              error.message === "Authentication required"
+                ? "Authentication required"
+                : "Please close this window and re-enter a valid Anthropic API key."
           },
           { status: 401 }
         )
@@ -113,6 +125,18 @@ Test Cases: ${JSON.stringify(problemInfo.test_cases ?? [], null, 2)}`
       message: error.message,
       stack: error.stack
     })
+
+    // Handle auth errors in the outer catch block as well
+    if (
+      error.message === "No token provided" ||
+      error.message === "Invalid token"
+    ) {
+      return NextResponse.json(
+        { error: "Authentication required" },
+        { status: 401 }
+      )
+    }
+
     return NextResponse.json(
       { error: error.message || "An unknown error occurred" },
       { status: 500 }

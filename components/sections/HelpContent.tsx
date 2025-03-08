@@ -219,7 +219,7 @@ export function HelpContent() {
                       <DropdownMenuContent>
                         <DropdownMenuItem>
                           <Link
-                            href="https://github.com/ibttf/interview-coder/releases/download/v1.0.18/Interview-Coder-arm64.dmg"
+                            href="https://github.com/ibttf/interview-coder/releases/download/v1.0.19/Interview-Coder-arm64.dmg"
                             className="w-full"
                           >
                             Download for Mac (Apple Silicon)
@@ -227,7 +227,7 @@ export function HelpContent() {
                         </DropdownMenuItem>
                         <DropdownMenuItem>
                           <Link
-                            href="https://github.com/ibttf/interview-coder/releases/download/v1.0.18/Interview-Coder-x64.dmg"
+                            href="https://github.com/ibttf/interview-coder/releases/download/v1.0.19/Interview-Coder-x64.dmg"
                             className="w-full"
                           >
                             Download for Mac (Intel)

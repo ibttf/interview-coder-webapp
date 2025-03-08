@@ -18,7 +18,12 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu"
 import { Badge } from "../ui/badge"
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger
+} from "@/components/ui/tooltip"
 import { LanguageToggle } from "../ui/LanguageToggle"
 import { useLanguage } from "@/lib/i18n/LanguageContext"
 
@@ -190,7 +195,7 @@ export default function Navbar({ showBanner = false }: NavbarProps) {
               className="relative"
             >
               <Lock className="w-4 h-4 mr-2 text-black" />
-              {t('nav.signup')}
+              {t("nav.signup")}
             </Button>
           )}
           <DropdownMenu>
@@ -206,7 +211,7 @@ export default function Navbar({ showBanner = false }: NavbarProps) {
                   </Avatar>
                   {isSubscribed && (
                     <div className="absolute -top-1 -right-3 bg-primary text-black text-[10px] font-semibold px-1.5 rounded-full">
-                      {t('misc.pro')}
+                      {t("misc.pro")}
                     </div>
                   )}
                 </div>
@@ -221,7 +226,7 @@ export default function Navbar({ showBanner = false }: NavbarProps) {
                   href="/settings"
                   className="cursor-pointer text-[#ABABAB] hover:text-white px-3 py-2.5"
                 >
-                  {t('nav.settings')}
+                  {t("nav.settings")}
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
@@ -229,7 +234,7 @@ export default function Navbar({ showBanner = false }: NavbarProps) {
                   href="/help"
                   className="cursor-pointer text-[#ABABAB] hover:text-white px-3 py-2.5"
                 >
-                  {t('nav.help')}
+                  {t("nav.help")}
                 </Link>
               </DropdownMenuItem>
               <div className="h-px bg-white/10 mx-3 my-1" />
@@ -238,7 +243,7 @@ export default function Navbar({ showBanner = false }: NavbarProps) {
                 disabled={isSigningOut}
                 className="cursor-pointer text-[#FF4545] hover:text-red-400 px-3 py-2.5 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {isSigningOut ? t('nav.signingOut') : t('nav.logout')}
+                {isSigningOut ? t("nav.signingOut") : t("nav.logout")}
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -252,12 +257,12 @@ export default function Navbar({ showBanner = false }: NavbarProps) {
         <LanguageToggle />
         <Link href="/signin">
           <Button variant="ghost" className="text-[#989898] hover:text-white">
-            {t('nav.login')}
+            {t("nav.login")}
           </Button>
         </Link>
         <Link href="/signup">
           <Button className="bg-primary text-black hover:bg-primary/90">
-            {t('nav.signup')}
+            {t("nav.signup")}
           </Button>
         </Link>
       </>
@@ -332,13 +337,13 @@ export default function Navbar({ showBanner = false }: NavbarProps) {
                       href="/#proof"
                       className="text-[#989898] hover:text-white transition-colors text-sm flex items-center gap-1.5"
                     >
-                      {t('misc.proof')}
+                      {t("misc.proof")}
                     </Link>
                     <Link
                       href="/help"
                       className="text-[#989898] hover:text-white transition-colors text-sm"
                     >
-                      {t('nav.help')}
+                      {t("nav.help")}
                     </Link>
                   </div>
                 </div>
@@ -372,14 +377,14 @@ export default function Navbar({ showBanner = false }: NavbarProps) {
                     className="text-[#989898] hover:text-white transition-colors text-sm flex items-center gap-1.5"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {t('misc.proof')}
+                    {t("misc.proof")}
                   </Link>
                   <Link
                     href="/help"
                     className="text-[#989898] hover:text-white transition-colors text-sm"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    {t('nav.help')}
+                    {t("nav.help")}
                   </Link>
                   {!loading && (
                     <div className="pt-2 border-t border-white/10 w-fit">
@@ -395,7 +400,7 @@ export default function Navbar({ showBanner = false }: NavbarProps) {
                               className="relative"
                             >
                               <Lock className="w-4 h-4 mr-2 text-black" />
-                              {t('nav.signup')}
+                              {t("nav.signup")}
                             </Button>
                           )}
                           <div className="flex items-center gap-3 py-2">
@@ -442,7 +447,7 @@ export default function Navbar({ showBanner = false }: NavbarProps) {
                           <div className="space-y-2 mt-2">
                             <Button variant="default" className="w-full">
                               <Link
-                                href="https://github.com/ibttf/interview-coder/releases/download/v1.0.18/Interview-Coder-arm64.dmg"
+                                href="https://github.com/ibttf/interview-coder/releases/download/v1.0.19/Interview-Coder-arm64.dmg"
                                 className="flex items-center gap-2 justify-center w-full bg-primary hover:bg-primary/90 text-black transition-all px-4 py-1.5 text-sm font-medium rounded-md"
                               >
                                 <Image
@@ -457,7 +462,7 @@ export default function Navbar({ showBanner = false }: NavbarProps) {
                             </Button>
                             <Button variant="default" className="w-full">
                               <Link
-                                href="https://github.com/ibttf/interview-coder/releases/download/v1.0.18/Interview-Coder-x64.dmg"
+                                href="https://github.com/ibttf/interview-coder/releases/download/v1.0.19/Interview-Coder-x64.dmg"
                                 className="flex items-center gap-2 justify-center w-full bg-primary hover:bg-primary/90 text-black transition-all px-4 py-1.5 text-sm font-medium rounded-md"
                               >
                                 <Image
@@ -473,7 +478,7 @@ export default function Navbar({ showBanner = false }: NavbarProps) {
 
                             <Button variant="default" className="w-full">
                               <Link
-                                href="https://github.com/ibttf/interview-coder/releases/download/v1.0.18/Interview.Coder-Windows-1.0.18.exe"
+                                href="https://github.com/ibttf/interview-coder/releases/download/v1.0.19/Interview.Coder-Windows-1.0.18.exe"
                                 className="flex items-center justify-center w-full bg-primary hover:bg-primary/90 text-black transition-all px-4 py-1.5 text-sm font-medium rounded-md"
                               >
                                 <Image
