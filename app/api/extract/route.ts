@@ -3,6 +3,7 @@ import { NextResponse } from "next/server"
 import Anthropic from "@anthropic-ai/sdk"
 import { z } from "zod"
 import { withTimeout } from "../config"
+import { verifyAuth } from "../auth"
 
 export const maxDuration = 300
 
@@ -34,6 +35,15 @@ function detectImageType(
 
 export async function POST(request: Request) {
   try {
+    // Verify authentication first
+    const authResult = await verifyAuth()
+    if (authResult.error) {
+      return NextResponse.json(
+        { error: authResult.error },
+        { status: authResult.status }
+      )
+    }
+
     const { imageDataList } = await request.json()
 
     if (!imageDataList || !Array.isArray(imageDataList)) {
@@ -134,7 +144,9 @@ If no test cases are visible in the image, return an empty array for test_cases.
         return NextResponse.json(
           {
             error:
-              "Please close this window and re-enter a valid Anthropic API key."
+              error.message === "Authentication required"
+                ? "Authentication required"
+                : "Please close this window and re-enter a valid Anthropic API key."
           },
           { status: 401 }
         )
@@ -158,6 +170,18 @@ If no test cases are visible in the image, return an empty array for test_cases.
       message: error.message,
       stack: error.stack
     })
+
+    // Handle auth errors in the outer catch block as well
+    if (
+      error.message === "No token provided" ||
+      error.message === "Invalid token"
+    ) {
+      return NextResponse.json(
+        { error: "Authentication required" },
+        { status: 401 }
+      )
+    }
+
     return NextResponse.json(
       { error: error.message || "An unknown error occurred" },
       { status: 500 }

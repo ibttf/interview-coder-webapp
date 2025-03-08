@@ -1,5 +1,7 @@
 import { Anthropic } from "@anthropic-ai/sdk"
 import { withTimeout } from "../config"
+import { verifyAuth } from "../auth"
+import { NextResponse } from "next/server"
 
 // Define types based on Anthropic's SDK structure
 type ImageContentBlock = {
@@ -54,6 +56,12 @@ export async function extractCodeFromImages(
     | "sql"
     | "swift" = "python"
 ) {
+  // Verify authentication first
+  const authResult = await verifyAuth()
+  if (authResult.error) {
+    throw new Error(authResult.error)
+  }
+
   console.log("Starting code extraction from images...")
 
   if (!imageDataList || !Array.isArray(imageDataList)) {
@@ -127,6 +135,13 @@ export async function extractCodeFromImages(
       response: error.response?.data,
       status: error.response?.status
     })
+
+    if (
+      error.message === "No token provided" ||
+      error.message === "Invalid token"
+    ) {
+      throw new Error("Authentication required")
+    }
 
     if (error.response?.status === 401) {
       throw new Error("Please provide a valid Anthropic API key")

@@ -32,17 +32,17 @@ export const VideoSection = () => {
                 textShadow: "0 0 20px rgba(255, 255, 255, 0.3)"
               }}
             >
-              <span className="white-gradient">{t('misc.proof')}</span>
+              <span className="white-gradient">{t("misc.proof")}</span>
             </h2>
             <p className="text-md sm:text-lg text-[#999999]">
-              {t('misc.watchMe')}
+              {t("misc.watchMe")}
               <br />
               <br />
-              {language === 'en' ? (
+              {language === "en" ? (
                 <>
-                  {t('misc.skeptical')}{" "}
+                  {t("misc.skeptical")}{" "}
                   <a
-                    href="https://youtu.be/rcH813f5vCE"
+                    href="https://www.youtube.com/watch?v=8DTAO3kSZMs&ab_channel=MrLeeCode"
                     target="_blank"
                     className="underline hover:text-gray-400 transition-colors"
                   >
