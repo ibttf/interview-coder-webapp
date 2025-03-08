@@ -34,7 +34,7 @@ export default function Home() {
   }
 
   return (
-    <div className="relative w-screen overflow-x-hidden hero-gradient">
+    <div className="relative overflow-x-hidden hero-gradient">
       {/* <PriceIncreaseBanner isVisible={showBanner} onDismiss={handleDismiss} /> */}
       <Navbar showBanner={showBanner} />
       <HeroSection />
